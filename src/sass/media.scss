@@ -1,0 +1,112 @@
+@media (min-width: 768px) {
+	h2 {
+		font-size: 3.8rem;
+	}
+
+	.nav__btn {
+		left: 700px;
+	}
+
+	header {
+		// width: 107%;
+		background-image: url(../img/jungle-big.jpg);
+		p,
+		h1 {
+			top: 43%;
+			margin: 0em 0.3em;
+			font-size: 3rem;
+		}
+
+		h1 {
+			font-size: 3.5rem;
+			margin-top: 0.5em;
+		}
+	}
+
+	.aboutus {
+		.aboutus__desktop {
+			display: block;
+			background-position: center;
+			max-height: 50vh;
+		}
+
+		.aboutus__mobile {
+			display: none;
+		}
+
+		h3 {
+			font-size: 2.7rem;
+			margin-top: 1em;
+		}
+
+		&__text {
+			font-size: 2rem;
+			padding: 1em;
+			line-height: 2em;
+		}
+	}
+
+	
+
+		.hero-img {
+			background-image: url(../img/girl-big.jpg);
+		}
+	
+
+	.hero-img {
+		.hero-img__title {
+			font-size: 3.2rem;
+		}
+	}
+
+	.offer {
+		.offer__text {
+			font-size: 2rem;
+		}
+
+		.offer__title {
+			font-size: 3rem;
+			margin-top: 0.7em;
+		}
+
+		.offer__price {
+			font-size: 4.6rem;
+		}
+
+		.offer__items {
+			left: 33%;
+			margin-bottom: 1.5em;
+		}
+
+		.offer__options {
+			font-size: 2rem;
+		}
+
+		.offer__btn {
+			width: 50%;
+			font-size: 2rem;
+			margin-bottom: 1.3em;
+		}
+	}
+
+	.footer {
+		.footer__name {
+			font-size: 4.2rem;
+			padding: 1em;
+		}
+
+		.footer__heading {
+			font-size: 2.7rem;
+			margin: 1.5em 0em 0.7em 0em;
+		}
+
+		.footer__text {
+			font-size: 2.4rem;
+			margin-bottom: 1em;
+		}
+
+		.footer__company {
+			font-size: 2.5rem;
+		}
+	}
+}

@@ -1,0 +1,42 @@
+.form {
+    padding-bottom: 2em;
+   background-color: rgb(163, 172, 143);
+
+
+   .fa-envelope{
+    margin-right: 0.5em;
+   }
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		margin: 0em 1.2em 2.3em 1em;
+
+		label {
+            margin-bottom: 1em;
+            font-size: 2rem;
+		}
+
+        input{
+            font-size: 1.9rem;
+            padding: .5em;
+            border-radius: 5px;
+            border: none;
+        }
+
+        textarea{
+            padding: .2em;
+            font-size: 2.1rem;
+            border-radius: 5px;
+            max-height: 25vh;
+            resize: vertical;
+        }
+	}
+
+	&__heading {
+        display: inline-block;
+		margin: 2.4em .8em;
+		text-align: center;
+		font-size: 2.5rem;
+	}
+}

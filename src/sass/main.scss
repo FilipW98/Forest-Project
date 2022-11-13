@@ -1,0 +1,434 @@
+@use './header.scss' as *;
+@use './nav.scss' as *;
+@use './footer.scss' as *;
+@use './contact.scss' as *;
+// @use './media.scss' as *;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Montserrat', 'sains-serif';
+	font-size: 1.6rem;
+	// background-color: rgb(180, 178, 36);
+	overflow-x: hidden;
+}
+
+.aboutus {
+	&__desktop {
+		display: none;
+	}
+
+	img {
+		width: 100%;
+	}
+
+	h2 {
+		padding: 2em 0em;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-weight: normal;
+		text-decoration: underline;
+	}
+
+	&__title {
+		font-size: 2rem;
+		text-align: center;
+		font-weight: bold;
+		margin-top: 1em;
+	}
+
+	&__text {
+		padding: 1em;
+		line-height: 2em;
+	}
+}
+
+.hero-img {
+	position: relative;
+	min-height: 30vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url(../img/girl-small.jpg);
+	// width: 100%;
+	background-position: center;
+
+	&__hero-shadow {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+	&__title {
+		display: inline-block;
+		position: relative;
+		padding: 1em;
+		font-size: 2rem;
+		border: 1px solid rgb(201, 197, 197);
+		color: white;
+	}
+}
+
+.offer {
+	margin-bottom: 2.5em;
+	text-align: center;
+
+	h2 {
+		margin: 1.4em;
+		font-weight: normal;
+		text-decoration: underline;
+	}
+
+	&__text {
+		font-size: 1.5rem;
+		margin: 0em 1em 2.7em 1em;
+	}
+
+	&__card {
+		padding: 1.2em;
+		margin: 1.5em 2em;
+		border-radius: 0.5em;
+		border: 1px solid rgb(201, 197, 197);
+		box-shadow: 1px 1px 1px 1px #b1aeae;
+	}
+
+	&__title,
+	&__price,
+	&__btn {
+		font-weight: bold;
+		margin-bottom: 1em;
+	}
+
+	&__title {
+		font-size: 2rem;
+	}
+
+	&__price {
+		font-size: 2.6rem;
+	}
+
+	&__options {
+		margin-bottom: 1em;
+	}
+
+	&__options--highlighted {
+		color: #b1aeae;
+	}
+
+	&__items {
+		text-align: start;
+		position: relative;
+		left: 15%;
+	}
+
+	&__btn {
+		width: 40%;
+		margin-top: 1.2em;
+		padding: 0.6em;
+		border-radius: 0.3em;
+		border: none;
+		box-shadow: 1px 1px 1px 2px #b1aeae;
+		background-color: transparent;
+		cursor: pointer;
+		color: #424242;
+		transition: background-color 0.3s;
+	}
+
+	&__btn:hover {
+		background-color: rgb(230, 235, 232);
+	}
+
+	&__btn--highlight {
+		background-color: rgb(8, 226, 0);
+	}
+
+	&__btn--highlight:hover {
+		background-color: rgb(12, 250, 3);
+	}
+
+	.fa-check,
+	.fa-minus {
+		text-align: center;
+		margin-right: 1em;
+	}
+
+	.fa-check {
+		color: rgb(2, 218, 2);
+	}
+
+	.fa-minus {
+		color: #b1aeae;
+	}
+
+	a {
+		display: inline-block;
+		font-size: 2.2rem;
+		margin-top: 1.5em;
+		font-weight: bold;
+		color: rgb(6, 112, 211);
+	}
+
+	&__card--highlight {
+		margin-bottom: 3.5em;
+	}
+}
+
+// MEDIA QUERRIES=============
+
+@media (min-width: 768px) {
+	h2 {
+		font-size: 3.8rem;
+	}
+
+	.nav__btn {
+		right: 20%;
+	}
+
+	header {
+		// width: 107%;
+		background-image: url(../img/jungle-big.jpg);
+		p,
+		h1 {
+			top: 43%;
+			margin: 0em 0.3em;
+			font-size: 3rem;
+		}
+
+		h1 {
+			font-size: 3.5rem;
+			margin-top: 0.5em;
+		}
+	}
+
+	.aboutus {
+		.aboutus__desktop {
+			display: inline-block;
+			background-position: center;
+			// height: 500px;
+		}
+
+		.aboutus__mobile {
+			display: none;
+		}
+
+		h3 {
+			font-size: 2.7rem;
+			margin-top: 1em;
+		}
+
+		&__text {
+			font-size: 2rem;
+			padding: 1em;
+			line-height: 2em;
+		}
+	}
+
+	.hero-img {
+		background-image: url(../img/girl-big.jpg);
+		background-size: cover;
+	}
+
+	.hero-img {
+		.hero-img__title {
+			font-size: 3.2rem;
+		}
+	}
+
+	.offer {
+		.offer__text {
+			font-size: 2rem;
+		}
+
+		.offer__title {
+			font-size: 3rem;
+			margin-top: 0.7em;
+		}
+
+		.offer__price {
+			font-size: 4.6rem;
+		}
+
+		.offer__items {
+			left: 33%;
+			margin-bottom: 1.5em;
+		}
+
+		.offer__options {
+			font-size: 2rem;
+		}
+
+		.offer__btn {
+			width: 50%;
+			font-size: 2rem;
+			margin-bottom: 1.3em;
+		}
+	}
+
+	.footer {
+		.footer__name {
+			font-size: 4.2rem;
+			padding: 1em;
+		}
+
+		.footer__heading {
+			font-size: 2.7rem;
+			margin: 1.5em 0em 0.7em 0em;
+		}
+
+		.footer__text {
+			font-size: 2.4rem;
+			margin-bottom: 1em;
+		}
+
+		.footer__company {
+			font-size: 2.5rem;
+		}
+	}
+}
+
+// LARGE (992px)
+
+@media (min-width: 992px) {
+	.nav {
+		background-color: #ffffff;
+		padding: 0em;
+		.nav__btn {
+			display: none;
+		}
+
+		.nav__items {
+			font-size: 2rem;
+			display: inline-block;
+			width: 100%;
+
+			p {
+				display: inline-block;
+				margin: 0;
+				font-size: 4rem;
+
+				i {
+					margin-right: 10px;
+				}
+			}
+
+			.nav__links {
+				display: flex;
+				margin-top: 0;
+				ul {
+					cursor: auto;
+					width: 100%;
+					list-style: none;
+
+					li {
+						cursor: pointer;
+						margin-left: 10px;
+						display: inline-block;
+						margin-top: 0em;
+						padding: 2em 1em;
+						transition: background 0.3s;
+					}
+					li:hover {
+						color: #ffffff;
+						background-color: rgb(0, 0, 0);
+					}
+				}
+
+				#first {
+					margin-left: 300px;
+				}
+			}
+		}
+	}
+
+	.aboutus {
+		.aboutus__wrapper {
+			display: flex;
+			margin: 0 100px 55px 0;
+			// width: 100%;
+			// max-width: 1200px;
+		}
+
+		.aboutus__container {
+			margin-left: 2.3em;
+			display: inline-block;
+			width: 55%;
+			.aboutus__title {
+				margin-top: 0;
+				text-align: left;
+				padding-left: 0.6em;
+			}
+
+			.aboutus__text {
+				font-size: 1.8rem;
+			}
+		}
+
+		img {
+			width: 450px;
+			height: 300px;
+			// min-height: auto;
+			// width: 50%;
+		}
+	}
+}
+
+// EXTRA LARGE=============
+
+@media (min-width: 1200px) {
+	header {
+		.header__container {
+			position: relative;
+			left: -175px;
+		}
+		min-height: 65vh;
+		background-position: 5% 65%;
+		p,
+		h1 {
+			text-align: left;
+			font-size: 4.2rem;
+			color: #ffffff;
+		}
+
+		h1 {
+			margin-top: 0;
+			font-size: 5rem;
+		}
+	}
+
+	.aboutus {
+		img{
+			width: 600px;
+			height: 400px;
+		}
+		.aboutus__wrapper {
+			display: flex;
+			justify-content: center;
+		}
+		.aboutus__container {
+			width: 40%;
+		}
+		.aboutus__title{
+			font-size: 3rem;
+		}
+		
+	}
+	.nav {
+		.nav__items {
+			font-size: 2.3rem;
+		}
+	}
+
+}

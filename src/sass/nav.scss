@@ -1,0 +1,44 @@
+.nav {
+	background-color: bisque;
+	// display: none;
+	padding-bottom: 2.7em;
+	text-align: center;
+	&__items {
+		font-size: 3rem;
+		cursor: pointer;
+
+
+
+
+		p {
+			margin-top: 4em;
+		}
+
+		.nav__links {
+			margin-top: 2em;
+		}
+
+		li {
+			margin-top: 1.2em;
+		}
+
+		a {
+			text-decoration: none;
+			color: black;
+			width: 50%;
+		}
+	}
+
+	&__btn {
+		position: fixed;
+		cursor: pointer;
+		top: 15px;
+		margin-left: auto;
+		z-index: 100;
+		background-color: transparent;
+		.fa-bars {
+			font-size: 3.6rem;
+			padding: 0.3em;
+		}
+	}
+}

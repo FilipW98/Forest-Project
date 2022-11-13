@@ -1,0 +1,34 @@
+.footer {
+	background-color: rgb(224, 223, 223);
+
+	&__cards {
+		text-align: center;
+	}
+
+	&__card {
+		margin-bottom: 2em;
+	}
+
+	&__name {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 3.2rem;
+		padding: .8em;
+	}
+
+	&__heading {
+		font-weight: bold;
+		font-size: 2rem;
+		margin: 0.7em 0em;
+	}
+
+	&__text {
+		margin-bottom: 0.6em;
+	}
+
+	&__company {
+		text-align: center;
+		line-height: 3em;
+	}
+}
