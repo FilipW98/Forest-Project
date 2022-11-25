@@ -119,10 +119,17 @@
 		}
 	}
 
-    
-	.hero-img-desktop {
-        background-image: url('/klient1/dist/img/girl-big.jpg');
-		margin-top: 5em;
+	// .hero-img {
+	// 	background-image: url(../img/girl-big.jpg);
+	// 	background-size: cover;
+	// }
+
+	main {
+		.hero-img-desktop {
+			background-image: url('../img/girl-big.jpg');
+			margin-top: 5em;
+			background-size: cover;
+		}
 	}
 
 	.offer {
@@ -265,7 +272,7 @@
 				}
 			}
 		}
-		
+
 		.aboutus__desktop {
 			width: 700px;
 			height: 400px;
@@ -284,7 +291,17 @@
 			}
 		}
 	}
-  
+	main {
+		.hero-img-desktop {
+			background-image: url('../img/girl-big.jpg');
+			margin-top: 5em;
+			min-height: 45vh;
+		}
+        .hero-img__title {
+            padding: 1.2em;
+            font-size: 3rem;
+        }
+	}
 
 	.offer {
 		margin-bottom: 3em;
