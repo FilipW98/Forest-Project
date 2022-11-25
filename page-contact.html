@@ -17,92 +17,129 @@
 </head>
 
 <body>
+    <button class="nav__btn nav-form__btn">
+   <i class="fa-solid fa-bars"></i>
+</button>
+<nav class="nav nav-form">
+  
+        <div class="nav__items nav-form__items">
 
-    
-<nav class="nav">
-    <button class="nav__btn">
-        <i class="fa-solid fa-bars"></i>
-    </button>
+            <div class="nav__links nav-form__links">
+                <ul>
+                    <p><i class="fas fa-tree"></i>Forest</p>
 
-    <div class="nav__items">
+                    <a href="../index.html" id="first"  >
+                        <li>Home</li>
+                    </a>
+                    <a href="#aboutus">
+                        <li> O nas</li>
+                    </a>
+                    <a href="../index.html">
+                        <li> Oferta</li>
+                    </a>
+                    <a href="../page-contact.html" target="_blank">
+                        <li>Kontakt</li>
+                    </a>
 
-        <div class="nav__links">
-            <ul>
-                <p><i class="fas fa-tree"></i>Forest</p>
-              
-                <a href="#home" id="first"><li>Home</li></a>
-                <a href="#aboutus"><li> O nas</li></a>
-                <a href="#offer"><li> Oferta</li></a>
-                <li>Kontakt<a href="../page-contact.html"></a></li>
-            </ul>
+                </ul>
+            </div>
         </div>
-    </div>
 </nav>
+
     <section class="form" id="contact">
+        <div class="form__hero-img">
+            <h2 class="form__title">KONTAKT</h2>
+        </div>
+        <div class="form__box">
+            <div class="form__map-text">
+                <p class="form__box-heading">Znajdź nas na <span>Google Maps</span>!</p>
+                <img class="form__box-img" src="../src/img/google-moja-firma.png" alt="mapa">
+            </div>
+            <div class="form__contact-data">
+                <div id="map"></div>
 
-        <h2 class="form__heading"><i class="fa-solid fa-envelope"></i>Formularz kontaktowy</h2>
-
-        <div class=" form__item form__name">
-            <label for="name">Imię i nazwisko:</label>
-            <input type="text" id="name">
+                <div class="form__adress" id="phone-contact">
+                    <h3><i class="fas fa-tree"></i>Forest Company</h3>
+                    <p>Ul. Jasnogórska 2 <span>59-013 Kraków</span></p>
+                    <div class="phone"> <i class="fas fa-phone"></i> 603 999 121</div>
+                </div>
+            </div>
         </div>
 
-        <div class=" form__item form__mail">
-            <label for="mail">Adres email:</label>
-            <input type="text" id="mail">
-        </div>
 
-        <div class=" form__item form__number">
-            <label for="number">Numer telefonu:</label>
-            <input type="number" id="number">
-        </div>
+        <div class="form__contact" id="message">
+            <h2 class="form__heading"><i class="fa-solid fa-envelope"></i>Formularz kontaktowy</h2>
 
-        <div class=" form__item form__text">
-            <label for="text">Treść wiadomości:</label>
-            <textarea id="text" cols="30" rows="8"></textarea>
+            <div class=" form__item form__name">
+                <label for="name">Imię i nazwisko:</label>
+                <input type="text" id="name">
+            </div>
+
+            <div class=" form__item form__mail">
+                <label for="mail">Adres email:</label>
+                <input type="text" id="mail">
+            </div>
+
+            <div class=" form__item form__number">
+                <label for="number">Numer telefonu:</label>
+                <input type="number" id="number">
+            </div>
+
+            <div class=" form__item form__text">
+                <label for="text">Treść wiadomości:</label>
+                <textarea id="text" cols="30" rows="8"></textarea>
+            </div>
+            <button class="form__btn">Wyslij</button>
         </div>
 
 
     </section>
 
-    <div class="map"></div>
     <footer class="footer">
 
-    <p class="footer__name"><i class="fas fa-tree"></i>Forest</p>
+    <div class="footer__container">
+        <p class="footer__name"><i class="fas fa-tree"></i>Forest</p>
 
 
-    <div class="footer__cards">
-        <div class="footer__card">
+        <div class="footer__cards">
+            <div class="footer__card">
 
-            <p class="footer__heading">O nas</p>
-            <p class="footer__text">Historia</p>
-            <p class="footer__text">Parki</p>
-            <p class="footer__text">Opinie</p>
+                <p class="footer__heading">O nas</p>
+                <p class="footer__text">Historia</p>
+                <p class="footer__text">Parki</p>
+                <p class="footer__text">Opinie</p>
+
+            </div>
+
+            <div class="footer__card">
+                <p class="footer__heading">Nasza firma</p>
+                <p class="footer__text">Praca</p>
+                <p class="footer__text">Kadry</p>
+                <p class="footer__text">Zarząd</p>
+            </div>
+
+            <div class="footer__card">
+                <p class="footer__heading">Dokumenty</p>
+                <p class="footer__text">Wnioski</p>
+                <p class="footer__text">Rezerwacje</p>
+            </div>
+
 
         </div>
 
-        <div class="footer__card">
-            <p class="footer__heading">Nasza firma</p>
-            <p class="footer__text">Praca</p>
-            <p class="footer__text">Kadry</p>
-            <p class="footer__text">Zarząd</p>
-        </div>
-
-        <div class="footer__card">
-            <p class="footer__heading">Dokumenty</p>
-            <p class="footer__text">Wnioski</p>
-            <p class="footer__text">Rezerwacje</p>
-        </div>
-
-        
     </div>
-    
+
+
     <hr>
- 
-        <p class="footer__company">&copy; 2022 Forest Group Company Ltd. </p>
-    
+    <p class="footer__company">&copy; 2022 Forest Group Company Ltd. </p>
+
+
+
 </footer>
     <script src="../dist/js/script.min.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLwH_b4wPSevvEBCvoXCxlyHjMSsn03KA&callback=initMap&libraries=&v=weekly"
+        async></script>
 </body>
 
 </html>
