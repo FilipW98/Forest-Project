@@ -49,8 +49,8 @@
 
 .nav__btn {
 	position: fixed;
-	top: 25px;
-	right: 20px;
+	top: 30px;
+	right: 25px;
 	cursor: pointer;
 	background-color: transparent;
 	color: rgba(255, 255, 255, 0.89);
@@ -58,7 +58,7 @@
 	z-index: 100000000;
 	.fa-bars {
 		font-size: 4rem;
-		padding: 0.3em;
+		padding: 0.5em;
 	}
 }
 
