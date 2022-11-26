@@ -340,17 +340,13 @@
 			.form__box {
 				margin-top: 1em;
 				
-				
 				.form__box-map{
-					display: flex;
-					justify-content: center;
-					align-items: center;
+					flex-direction: row;
 					height: 20vh;
 					margin: -16px;
-					// padding-bottom: 2em;
 					color: #ffffffd8;
 					background-color: rgba(0, 0, 0, 0.712);
-					#map-icon {
+					.form__box-img {
 						height: 90px;
 						width: 90px;
 						margin-top: -3em;
@@ -362,6 +358,7 @@
 	
 				#map {
 					margin-left: 3em;
+					max-width: 900px;
 				}
 				.form__adress {
 					width: 60%;
@@ -424,4 +421,16 @@
 			}
 		}
 	}
+}
+
+
+@media(min-width: 1600px) {
+
+	#map {
+		margin-left: 3em;
+		max-width: 900px;
+		min-height: 600px;
+	}
+
+
 }
