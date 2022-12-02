@@ -4,6 +4,7 @@
 	.nav__btn {
 		display: none;
 	}
+
 	.nav {
 		position: static;
 		transform: translateX(0);
@@ -11,9 +12,6 @@
 		background-color: #ffffff;
 		padding-bottom: 0;
 
-		.nav__btn {
-			display: none;
-		}
 
 		.nav__items {
 			font-size: 2rem;
@@ -144,9 +142,6 @@
 				width: 33%;
 				margin: 1em;
 				padding: 0;
-				.offer__items {
-					left: 10%;
-				}
 			}
 		}
 	}
@@ -314,7 +309,6 @@
 					.offer__options {
 						position: relative;
 						font-size: 1.8rem;
-						left: 10%;
 					}
 				}
 			}

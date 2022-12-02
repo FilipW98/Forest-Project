@@ -3,8 +3,8 @@
 @use './footer.scss' as *;
 @use './contact.scss' as *;
 @use './moreoffer-nav' as *;
-@use './large' as *;
 @use './medium' as *;
+@use './large' as *;
 
 * {
 	box-sizing: border-box;
@@ -15,13 +15,12 @@
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
+
 }
 
 body {
 	font-family: 'Montserrat', 'sains-serif';
 	font-size: 1.6rem;
-	// background-color: rgb(180, 178, 36);
-	overflow-x: hidden;
 }
 
 .no-scroll {
@@ -134,10 +133,20 @@ body {
 		color: #b1aeae;
 	}
 
+	&__check{
+
+		margin-left: -38px;
+
+	}
+
 	&__items {
-		text-align: start;
-		position: relative;
-		left: 26%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		// text-align: start;
+		// position: relative;
 	}
 
 	&__btn {

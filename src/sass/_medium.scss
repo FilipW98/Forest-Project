@@ -1,17 +1,4 @@
-@media(min-width: 600px) {
 
-	.offer{
-
-		.offer__items {
-			left: 36%;
-		}
-	
-
-
-	}
-
-
-}
 
 
 
@@ -20,6 +7,18 @@
 // MEDIA QUERRIES=============
 
 @media (min-width: 768px) {
+
+
+	
+		.nav{
+			top: -50px;
+			padding-bottom: 15em;
+			.nav__items {
+				padding-top: 6em;
+			}
+		}
+
+	
 	h2 {
 		font-size: 3.8rem;
 	}
@@ -80,7 +79,7 @@
 		}
 
 		.offer__items {
-			left: 33%;
+			// left: 33%;
 			margin-bottom: 1.5em;
 		}
 
