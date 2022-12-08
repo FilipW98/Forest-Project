@@ -14,71 +14,76 @@ const reload = browserSync.reload;
 
 const paths = {
     html: './html/**/*.kit',
-	sass: './src/sass/**/*.scss',
-	js: './src/js/**/*.js',
-	img: './src/img/*',
-	dist: './dist',
-	sassDest: './dist/css',
-	jsDest: './dist/js',
-	imgDest: './dist/img',
-};
+    sass: './src/sass/**/*.scss',
+    js: './src/js/**/*.js',
+    img: './src/img/*',
+    dist: './dist',
+    sassDest: './dist/css',
+    jsDest: './dist/js',
+    imgDest: './dist/img',
+}
 
 function sassCompiler(done) {
-	src(paths.sass)
-		.pipe(sourcemaps.init())
-		.pipe(sass().on('error', sass.logError))
-		.pipe(autoprefixer())
-		.pipe(cssnano())
-		.pipe(rename({ suffix: '.min' }))
-		.pipe(sourcemaps.write())
-		.pipe(dest(paths.sassDest));
-	done();
+    src(paths.sass)
+        .pipe(sourcemaps.init())
+        .pipe(sass().on('error', sass.logError))
+        .pipe(autoprefixer())
+        .pipe(cssnano())
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(sourcemaps.write())
+        .pipe(dest(paths.sassDest));
+    done()
 }
 
 function javaScript(done) {
-	src(paths.js)
-		.pipe(sourcemaps.init())
-		.pipe(babel({ presets: ['@babel/env'] }))
-		.pipe(uglify())
-		.pipe(rename({ suffix: '.min' }))
-		.pipe(sourcemaps.write())
-		.pipe(dest(paths.jsDest));
-	done();
+    src(paths.js)
+        .pipe(sourcemaps.init())
+        .pipe(babel({ presets: ['@babel/env'] }))
+        .pipe(uglify())
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(sourcemaps.write())
+        .pipe(dest(paths.jsDest));
+    done()
 }
 
-function convertImage(done) {
-	src(paths.img).pipe(sourcemaps.init()).pipe(imagemin()).pipe(sourcemaps.write()).pipe(dest(paths.imgDest));
-	done();
+function convertImages(done) {
+    src(paths.img)
+        .pipe(imagemin())
+        .pipe(dest(paths.imgDest));
+    done()
 }
 
 function handleKits(done) {
-	src(paths.html)
-    .pipe(kit())
-    .pipe(dest('./'));
-	done();
+    src(paths.html)
+        .pipe(kit())
+        .pipe(dest('./'));
+    done()
 }
 
 function cleanStuff(done) {
-	src(paths.dist, { read: false }).pipe(clean());
-	done();
+    src(paths.dist, { read: false })
+        .pipe(clean());
+    done()
 }
 
 function startBrowserSync(done) {
-	browserSync.init({
-		server: {
-			baseDir: './',
-		},
-	});
-	done();
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
+
+    done()
 }
 
-function watchChanges(done) {
-	watch('./*.html').on('change', reload);
-	watch([paths.html,paths.sass, paths.js], parallel(handleKits, sassCompiler, javaScript)).on('change', reload);
-	watch(paths.img, convertImage).on('change', reload);
-	done();
+function watchForChanges(done) {
+    watch('./*.html').on("change", reload);
+    watch([paths.html, paths.sass, paths.js], parallel( sassCompiler, javaScript)).on("change", reload);
+    watch(paths.img, convertImages).on("change", reload);
+    done()
 }
 
-const mainFunctions = parallel(handleKits, sassCompiler, javaScript, convertImage);
-exports.cleanStuff = cleanStuff;
-exports.default = series(mainFunctions, startBrowserSync, watchChanges);
+
+const mainFunctions = parallel(handleKits,sassCompiler, javaScript, convertImages)
+exports.cleanStuff = cleanStuff
+exports.default = series(mainFunctions, startBrowserSync, watchForChanges)

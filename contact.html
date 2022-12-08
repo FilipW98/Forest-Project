@@ -13,11 +13,38 @@
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/d3231c159b.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="../dist/css/main.min.css">
+    <link rel="stylesheet" href="./dist/css/main.min.css">
 </head>
 
 <body>
-    <!-- @include 'dark-nav.kit' -->
+    <button class="nav__btn nav-form__btn">
+   <i class="fa-solid fa-bars"></i>
+</button>
+<nav class="nav nav-form">
+  
+        <div class="nav__items nav-form__items">
+
+            <div class="nav__links nav-form__links">
+                <ul>
+                    <p><i class="fas fa-tree"></i>Forest</p>
+
+                    <a href="./index.html" id="first"  >
+                        <li>Home</li>
+                    </a>
+                    <a href="./index.html">
+                        <li> O nas</li>
+                    </a>
+                    <a href="./index.html">
+                        <li> Oferta</li>
+                    </a>
+                    <a href="./contact.html" target="_blank">
+                        <li>Kontakt</li>
+                    </a>
+
+                </ul>
+            </div>
+        </div>
+</nav>
 
     <section class="form" id="contact">
         <div class="form__hero-img">
@@ -26,7 +53,7 @@
         <div class="form__box">
             <div class="form__box-map">
                 <p class="form__box-heading">Znajdź nas na <span>Google Maps</span>!</p>
-                <img class="form__box-img" src="../src/img/google-moja-firma.png" alt="mapa">
+                <img class="form__box-img" src="./src/img/google-moja-firma.png" alt="mapa">
             </div>
             <div class="form__contact-data">
                 <div id="map"></div>
@@ -68,8 +95,34 @@
 
     </section>
 
-    <!-- @include 'footer.kit' -->
-    <script src="../dist/js/script.min.js"></script>
+    <footer class="footer">
+    <div class="footer__container">
+        <p class="footer__name"><i class="fas fa-tree"></i>Forest</p>
+        <div class="footer__cards">
+            <div class="footer__card">
+                <p class="footer__heading">O nas</p>
+                <p class="footer__text">Historia</p>
+                <p class="footer__text">Parki</p>
+                <p class="footer__text">Opinie</p>
+
+            </div>
+            <div class="footer__card">
+                <p class="footer__heading">Nasza firma</p>
+                <p class="footer__text">Praca</p>
+                <p class="footer__text">Kadry</p>
+                <p class="footer__text">Zarząd</p>
+            </div>
+            <div class="footer__card">
+                <p class="footer__heading">Dokumenty</p>
+                <p class="footer__text">Wnioski</p>
+                <p class="footer__text">Rezerwacje</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <p class="footer__company">&copy; 2022 Forest Group Company Ltd. </p>
+</footer>
+    <script src="./dist/js/script.min.js"></script>
     <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLwH_b4wPSevvEBCvoXCxlyHjMSsn03KA&callback=initMap&libraries=&v=weekly"
         async></script>
