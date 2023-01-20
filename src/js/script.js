@@ -73,7 +73,7 @@ function initMap() {
 	infowindow.open(map, marker);
 }
 
-
+console.log('cześć');
 
 navBtn.addEventListener('click', toggleNav)
 window.addEventListener('scroll', handleObserver)
