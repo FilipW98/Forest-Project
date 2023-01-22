@@ -117,10 +117,6 @@
 		}
 	}
 
-	// .hero-img {
-	// 	background-image: url(../img/girl-big.jpg);
-	// 	background-size: cover;
-	// }
 
 	main {
 		.hero-img-desktop {
@@ -321,8 +317,6 @@
 				overflow: hidden;
 				min-height: 45vh;
 				background-position: 0% 0%;
-				// background-position: center ;
-				// background-size: contain;
 				background-size: cover;
 				background-color: transparent;
 				background-size: 2200px;
@@ -352,33 +346,41 @@
 	
 				#map {
 					margin-left: 3em;
-					max-width: 900px;
+					max-width: 650px;
 				}
-				.form__adress {
-					width: 60%;
-					text-align: right;
-					background-color: transparent;
-					justify-content: start;
-					align-items: center;
-					h3 {
-						margin-top: 1em;
-						font-size: 4.2rem;
-						text-decoration: underline;
-						display: inline-block;
-					}
-					p,
-					span,
-					.phone {
-						font-size: 3.2rem;
-						margin: 0.2em 1em;
-					}
-				}
+
 	
 				.form__contact-data {
 					min-height: 80vh;
 					position: relative;
 					flex-direction: row;
 					background-color: hsl(0, 0%, 100%);
+					.form__adress {
+						height: 450px;
+						width: 500px;
+						padding-bottom: 2em;
+						margin-left: 2em;
+						text-align: right;
+						justify-content: start;
+						align-items: center;
+						border-radius: 10px;
+						// margin-right: 2em;
+						background-color: #746d6d;
+						background-color: #968776;
+						h3 {
+							font-size: 4.2rem;
+							padding-top: 1.5em;
+							text-decoration: underline;
+							display: inline-block;
+						}
+						p,
+						span,
+						.phone {
+							font-size: 3.2rem;
+							margin: 0.2em 1em;
+							position: relative;
+						}
+					}
 				}
 			}
 	
