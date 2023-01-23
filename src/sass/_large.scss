@@ -12,7 +12,6 @@
 		background-color: #ffffff;
 		padding-bottom: 0;
 
-
 		.nav__items {
 			font-size: 2rem;
 			display: inline-block;
@@ -116,7 +115,6 @@
 			width: auto;
 		}
 	}
-
 
 	main {
 		.hero-img-desktop {
@@ -311,7 +309,7 @@
 		}
 	}
 
-	body{
+	body {
 		.form {
 			.form__hero-img {
 				overflow: hidden;
@@ -320,15 +318,15 @@
 				background-size: cover;
 				background-color: transparent;
 				background-size: 2200px;
-	
+
 				.form__title {
 					margin-top: 0em;
 				}
 			}
 			.form__box {
 				margin-top: 1em;
-				
-				.form__box-map{
+
+				.form__box-map {
 					flex-direction: row;
 					height: 20vh;
 					margin: -16px;
@@ -343,13 +341,12 @@
 						width: 430px;
 					}
 				}
-	
+
 				#map {
 					margin-left: 3em;
 					max-width: 650px;
 				}
 
-	
 				.form__contact-data {
 					min-height: 80vh;
 					position: relative;
@@ -364,8 +361,6 @@
 						justify-content: start;
 						align-items: center;
 						border-radius: 10px;
-						// margin-right: 2em;
-						background-color: #746d6d;
 						background-color: #968776;
 						h3 {
 							font-size: 4.2rem;
@@ -383,7 +378,7 @@
 					}
 				}
 			}
-	
+
 			.form__contact {
 				display: flex;
 				flex-direction: column;
@@ -404,7 +399,6 @@
 			}
 		}
 	}
-	
 
 	.footer {
 		.footer__name {
@@ -419,14 +413,22 @@
 	}
 }
 
+@media (min-width: 1600px) {
 
-@media(min-width: 1600px) {
-
-	#map {
-		margin-left: 3em;
-		max-width: 900px;
-		min-height: 600px;
+	body {
+		.form {
+			.form__box {
+				#map {
+					margin-left: 3em;
+					max-width: 900px;
+					min-height: 600px;
+				}
+				.form__contact-data {
+					.form__adress {
+						margin-left: 6em;
+					}
+				}
+			}
+		}
 	}
-
-
 }
