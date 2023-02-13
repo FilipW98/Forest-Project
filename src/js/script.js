@@ -43,7 +43,7 @@ function initMap() {
 		center: { lat: 50.088230657344816, lng: 19.89288689227915 },
 		zoom: 16,
 	});
-	marker = new google.maps.Marker({
+	const marker = new google.maps.Marker({
 		position: { lat: 50.088230657344816, lng: 19.89288689227915 },
 		map,
 		title: 'Siedziba Firmy',
